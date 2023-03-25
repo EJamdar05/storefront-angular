@@ -1,0 +1,19 @@
+<div>
+    <img [src]="product.url" width = "200px" height="300px" />
+    <p id = 'item-name'>{{product.name}}</p>
+    <p id = 'price'>{{product.price}}</p>
+    <label for="cars">Quantity:</label>
+    <select name="quantity" id="quantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <button class="btn btn-primary" style="margin-right: 10px" (click)="add(product)">Buy Item</button>
+</div>
