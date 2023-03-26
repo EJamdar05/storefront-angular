@@ -8,6 +8,7 @@ import { Product } from '../models/Product';
 export class ProductItemComponent {
   numbers: number[] = []
   @Input() product: Product;
+  @Input('num') num: number = 1;
   constructor () {
     for(let i = 1 ; i <= 20 ; i++){
       this.numbers.push(i);
