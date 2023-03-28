@@ -10,9 +10,15 @@
   a {
     color: #ffffff;
     font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-shadow: 2px 2px black;
   }
 
   #logo{
     flex-direction: column;
     text-align: center;
+    text-shadow: 2px 2px #86a0b4;
   }

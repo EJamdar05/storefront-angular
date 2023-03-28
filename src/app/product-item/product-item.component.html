@@ -5,9 +5,9 @@
     <p id = 'item-name'>{{product.name}}</p>
     <p id = 'price'>{{product.price}}</p>
     <label for="cars">Quantity:</label>
-    <select class = 'select-input form-select' name="quantity" id="quantity">
+    <select #quant (change)="onSelected(quant.value)" class = 'select-input form-select' name="quantity" id="quantity">
       <option *ngFor="let num of numbers" [value]="num">{{num}}</option>
     </select>
-    <button class="btn btn-primary" style="margin-right: 10px" (click)="add(product)">Buy Item</button>
+    <button class="btn btn-primary" style="margin-right: 10px" id = "quant" (click)="add(product)">Buy Item</button>
 </div>
 
