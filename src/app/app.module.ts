@@ -10,7 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProductItemComponent,
     ProductListComponent,
     NavbarComponent,
+    ProductPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

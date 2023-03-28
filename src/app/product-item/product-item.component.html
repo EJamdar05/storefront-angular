@@ -1,5 +1,7 @@
 <div class = 'product-container'>
-    <img class = 'product-image' [src]="product.url" />
+    <a routerLink="/product">
+        <img class = 'product-image' [src]="product.url" (click)="navigate(product)" />
+    </a>
     <p id = 'item-name'>{{product.name}}</p>
     <p id = 'price'>{{product.price}}</p>
     <label for="cars">Quantity:</label>
@@ -8,3 +10,4 @@
     </select>
     <button class="btn btn-primary" style="margin-right: 10px" (click)="add(product)">Buy Item</button>
 </div>
+

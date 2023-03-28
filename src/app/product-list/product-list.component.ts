@@ -12,9 +12,8 @@ export class ProductListComponent {
 
   ngOnInit():void{
     this.prodServ.getItems().subscribe(res=>{
-      console.log("poo")
-      console.log("Res: "+res)
       this.products = res;
     })
   }
 }
+

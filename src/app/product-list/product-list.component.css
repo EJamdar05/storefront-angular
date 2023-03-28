@@ -2,8 +2,11 @@
     border: 2px solid red;
 } */
 
-.poo{
-    border: 2px solid red;
+.item-cont{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px 400px;
 }
