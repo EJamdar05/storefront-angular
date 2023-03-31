@@ -11,7 +11,7 @@
         </li>
     <div id = "total" >Total Due: {{total.toFixed(2)}}</div>
 </div>
-<form #form="ngForm" (ngSubmit)="onSubmit()">
+<form #form="ngForm" (ngSubmit)="onSubmit()" id = "form-cont">
     <div class="payment-cont form-group">
       <div class="label">
         <label>Name: </label>

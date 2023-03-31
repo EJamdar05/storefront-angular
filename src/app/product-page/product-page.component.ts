@@ -35,6 +35,7 @@ export class ProductPageComponent {
     product.totalPrice = this.totalQuantity * this.price
     this.cart.addProduct(product);
     console.log(this.cart.getCart())
+    alert("Item has been added to cart")
   }
 
 
