@@ -3,22 +3,22 @@
     flex-direction: row;
     justify-content: space-evenly;
     text-align: left;
-    background: #33B5E5;
+    background: #33b5e5;
     padding: 20px 200px 20px 200px;
-  }
-  
-  a {
+}
+
+a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
-  }
+}
 
-  a:hover{
+a:hover {
     text-shadow: 2px 2px black;
-  }
+}
 
-  #logo{
+#logo {
     flex-direction: column;
     text-align: center;
     text-shadow: 2px 2px #86a0b4;
-  }
+}

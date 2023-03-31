@@ -1,4 +1,4 @@
-export class Product{
+export class Product {
     id: number;
     name: string;
     price: number;
@@ -7,7 +7,7 @@ export class Product{
     quantity: number;
     totalPrice: number;
 
-    constructor(){
+    constructor() {
         this.id = 1;
         this.name = '';
         this.price = 0;
@@ -15,6 +15,5 @@ export class Product{
         this.description = '';
         this.quantity = 0;
         this.totalPrice = 0;
-    
     }
 }

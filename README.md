@@ -1,27 +1,8 @@
-# StorefrontEnd
+# Store FrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+The Store FrontEnd Project is an Angular based web application that serves the user with a product catalog, a product view tab when the image is pressed, the ability to add items to a cart and view the cart/checkout. Product catalog can be obtained via service, which allows for more dynamic code reuse. The project demonstrates the use of different components and how they all make up the overall single webpage. 
 
-## Development server
+Product catalog is obtained via a local data.json file but the code can be easily changed to interact with any API, as it uses HTTP requests to subscribe to the flow of data from the json file.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Instructions
+Clone the project locally and run npm install. Make sure that you have Angular installed on your machine. After running npm install, you should be able to use ng serve command to run the application on the default port 4200 (for Angular apps)/

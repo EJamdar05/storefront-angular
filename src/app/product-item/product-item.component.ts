@@ -1,8 +1,7 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Product } from '../models/Product';
 import { CurrentViewService } from '../services/current-view.service';
 import { CartServiceService } from '../services/cart-service.service';
-import { ProductServiceService } from '../services/product-service.service';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -11,8 +10,8 @@ import { ProductServiceService } from '../services/product-service.service';
 export class ProductItemComponent {
   numbers: number[] = []
   @Input() product: Product;
-  @Input('num') num: number = 1;
-  totalQuantity: number = 1;
+  @Input('num') num = 1;
+  totalQuantity = 1;
   @Input() price = 0;
 
   constructor (private curr: CurrentViewService, private cart: CartServiceService) {

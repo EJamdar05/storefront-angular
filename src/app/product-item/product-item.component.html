@@ -1,13 +1,29 @@
-<div class = 'product-container'>
+<div class="product-container">
     <a routerLink="/product">
-        <img class = 'product-image' [src]="product.url" (click)="navigate(product)" />
+        <img
+            class="product-image"
+            [src]="product.url"
+            (click)="navigate(product)"
+        />
     </a>
-    <p id = 'item-name'>{{product.name}}</p>
-    <p id = 'price'>{{product.price}}</p>
+    <p id="item-name">{{ product.name }}</p>
+    <p id="price">{{ product.price }}</p>
     <label for="cars">Quantity:</label>
-    <select #quant (change)="onSelected(quant.value)" class = 'select-input form-select' name="quantity" id="quantity">
-      <option *ngFor="let num of numbers" [value]="num">{{num}}</option>
+    <select
+        #quant
+        (change)="onSelected(quant.value)"
+        class="select-input form-select"
+        name="quantity"
+        id="quantity"
+    >
+        <option *ngFor="let num of numbers" [value]="num">{{ num }}</option>
     </select>
-    <button class="btn btn-primary" style="margin-right: 10px" id = "quant" (click)="add(product)">Buy Item</button>
+    <button
+        class="btn btn-primary"
+        style="margin-right: 10px"
+        id="quant"
+        (click)="add(product)"
+    >
+        Buy Item
+    </button>
 </div>
-

@@ -1,15 +1,18 @@
-<div class = 'product-page'>
-    <div class = 'pic-cont'>
-        <img class = 'product-image' [src]="img" />
+<div class="product-page">
+    <div class="pic-cont">
+        <img class="product-image" [src]="img" />
     </div>
-    <div class = "product-details">
-        <h3>{{name}}</h3>
-        <div>{{price}}</div>
-        <p>{{desc}}</p>
-        <select #quant class = 'select-input form-select' (change)="onSelected(quant.value)" name="quantity" id="quantity">
-            <option *ngFor="let num of numbers" [value]="num">{{num}}</option>
+    <div class="product-details">
+        <h3>{{ name }}</h3>
+        <div>{{ price }}</div>
+        <p>{{ desc }}</p>
+        <select #quant class="select-input form-select" (change)="onSelected(quant.value)" name="quantity"
+            id="quantity">
+            <option *ngFor="let num of numbers" [value]="num">{{ num }}</option>
         </select>
-        <button class="btn btn-primary" style="margin-right: 10px" id = 'quant' (click)="add()">Buy Item</button>
-        <a routerLink = "/">Return to products</a>
+        <button class="btn btn-primary" style="margin-right: 10px" id="quant" (click)="add()">
+            Buy Item
+        </button>
+        <a routerLink="/">Return to products</a>
     </div>
 </div>
