@@ -6,14 +6,31 @@ import { Product } from '../models/Product';
 })
 export class CartServiceService {
   cart: Product[] = []
-  constructor() { }
+  hasSeen: Set<String> 
+  constructor() { 
+    this.hasSeen = new Set()
+  }
 
   addProduct(product: Product){
-    this.cart.push(product);
+    console.log("The price: "+product.price)
+    const existingIndex = this.cart.findIndex(
+      (p)=>p.name === product.name
+    );
+
+    if(existingIndex !== -1){
+      this.cart[existingIndex].quantity+=product.quantity;
+      this.cart[existingIndex].totalPrice = product.price * product.quantity;
+    }else{
+      this.cart.push(product);
+    }
   }
 
   getCart(){
     return this.cart;
+  }
+
+  clearCart(){
+    this.cart = []
   }
 
 

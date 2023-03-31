@@ -1,12 +1,34 @@
-<!-- <div class = "cart-cont">
-        <div class = 'pic-cont'>
-            <img class = 'product-image' [src]="img" />
-        </div>
-        <div class = "product-details">
-            <h3>{{name}}</h3>
-            <div>{{price}}</div>
-            <input type="number" id = "quantity">
-        </div>
+<div class = "cart-cont">
+    <div class = "product-container">
+        <li *ngFor="let items of cart">
+            <div id = "img-cont">
+                <img class = 'product-image' [src]="items.url"/>
+            </div>
+            <h4>{{items.name}}</h4>
+            <div>{{items.price}}</div>
+            <label>Quantity: </label>
+            <input type="number" id = "quantity" value = {{items.quantity}} [(ngModel)] = "items.quantity" (input)="update($event)">
+        </li>
+    <div id = "total" >Total Due: {{total.toFixed(2)}}</div>
+</div>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="payment-cont form-group">
+      <div class="label">
+        <label>Name: </label>
+        <input class="form-control" id="name" type="text" name="name" required [(ngModel)]="name" placeholder="John Doe">
+      </div>
+      <div class="label">
+        <label>Address</label>
+        <input class="form-control" id="address" type="text" name="address" required [(ngModel)]="address" minlength="12" placeholder="123 A St Fairfax, VA 91912">
+      </div>
+      <div class="label">
+        <label>Card #: </label>
+        <input class="form-control" id="card-num" type="text" name="cardNumber" required minlength="16" maxlength="16"[(ngModel)]="cardNumber" placeholder="16 Digit Number">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="form.invalid" style="margin-right: 10px" id="checkout" (click)="checkout()">Checkout</button>
     </div>
+  </form>
+  
+</div>
+
     
-</div> -->

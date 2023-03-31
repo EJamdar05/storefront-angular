@@ -7,11 +7,20 @@ import { Dummy } from 'src/assets/dummy';
   providedIn: 'root'
 })
 export class ProductServiceService {
-
+  prices: number[] = []
   constructor(private http: HttpClient) { }
 
   getItems(): Observable<Product[]>{
     console.log(this.http.get<Product[]>('src/assets/data.json'))
     return this.http.get<Product[]>('assets/data.json');
   }
+
+  setPriceArray(price: number[]){
+    this.prices = price
+  }
+
+  getPriceArray(){
+    return this.prices;
+  }
+
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Product } from '../models/Product';
-import { CurrentViewService } from '../service/current-view.service';
+import { CurrentViewService } from '../services/current-view.service';
 import { CartServiceService } from '../services/cart-service.service';
+import { ProductServiceService } from '../services/product-service.service';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -12,6 +13,7 @@ export class ProductItemComponent {
   @Input() product: Product;
   @Input('num') num: number = 1;
   totalQuantity: number = 1;
+  @Input() price = 0;
 
   constructor (private curr: CurrentViewService, private cart: CartServiceService) {
     for(let i = 1 ; i <= 20 ; i++){
@@ -23,8 +25,10 @@ export class ProductItemComponent {
       price: 0,
       url: '',
       description: '',
-      quantity: 1
+      quantity: 1,
+      totalPrice: 0
     }
+
   }
 
   onSelected(value:string):void{
@@ -35,7 +39,7 @@ export class ProductItemComponent {
   add(product: Product){
     product.quantity = this.totalQuantity
     this.cart.addProduct(product);
-    alert('Added item to cart')
+    alert("Added to cart")
     console.log(this.cart.getCart())
   }
 
